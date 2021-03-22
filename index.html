@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>CoachPartner</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!--    <meta name="description" content="">-->
+
+    <!--    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
+    <!--    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">-->
+
+    <!--    <meta property=”og:title” content=”A15” />-->
+    <!--    <meta property=”og:url” content=”https://a15.org.ua” />-->
+    <!--    <meta property=”og:description” content= ”Ви інформуєте, ми — захищаємо.” />-->
+    <!--    <meta property=”og:image” content=”img/media-logo.png”/>-->
+    <!--    <meta property=”og:type” content=”article” />-->
+    <!--&lt;!&ndash;twitter&ndash;&gt;-->
+    <!--    <meta property=”twitter:title” content=”A15” />-->
+    <!--    <meta property=”twitter:url” content=”https://a15.org.ua” />-->
+    <!--    <meta property=”twitter:description” content= ”Ви інформуєте, ми — захищаємо.” />-->
+    <!--    <meta property=”twitter:image” content=”img/media-logo.png”/>-->
+
+
+</head>
+
+<body>
+<!--scroll to Top button-->
+<div id="scrollTop" class="scrollTop" onclick="scrollUp()" style="display: none">вверх</div>
+
+<link rel="stylesheet" href="css/main.min.css">
+<link rel="stylesheet" href="css/burger/burger.css">
+
+<!--Форма записи-->
+<div class="overlay appear" id="overlay"><!--overlay appear - how to do this?-->
+    <div class="overlay-content">
+        <form action="" class="form grid">
+            <div class="title-close subitems">
+                <div><h3 class="form-title">Запись на бесплатную сессию</h3></div>
+                <div><img class='close-button' src="img/close-button.svg" alt=""></div>
+            </div>
+            <div class="form-container grid">
+                <label for="form-name" class="form-description">Ваше имя: </label>
+                <input id="form-name" type="text" placeholder="Иванов Иван">
+                <label for="form-interest" class="form-description">Номер телефона: </label>
+                <input id="form-interest" type="text" placeholder="+38-050-555-55-55">
+                <div class="orange-button">Оставить заявку</div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<!--nav-->
+<nav class="navbar" id="navbar">
+    <div class="navigation grid">
+        <a href="#" class="logo" id="top"></a> <!--сделать кликабельным лого с #top-->
+        <div class="menu">
+            <a href="#about">Обо мне</a>
+            <a href="#services">Услуги</a>
+            <a href="https://" target="_blank">Блог</a>
+            <a href="#contacts">Контакты</a>
+        </div>
+        <div class="lang-menu">
+            <a href="#top" class="active">RU</a>
+            <span>|</span>
+            <a href="ua/index.html" class="">UA</a>
+        </div>
+
+        <!-- hamburger menu-->
+        <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox"/>
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+            <ul class="menu__box">
+                <li><a class="menu__item" href="#about">Обо мне</a></li>
+                <li><a class="menu__item" href="#services">Услуги</a></li>
+                <li><a class="menu__item" href="https://" target="_blank">Блог</a></li>
+                <li><a class="menu__item" href="#contacts">Контакты</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--./nav-->
+<header class="main-header">
+    <div class="container grid">
+        <div class="tagline">
+            <p><span class="header-h1">Все проще, чем кажется!</span></p>
+            <a href="#overlay"> <!-- тут должна быть всплывающая Форма записи-->
+                <div class="orange-button">Запись на сессию</div>
+            </a>
+        </div>
+        <div class="header-content"></div>
+    </div>
+</header>
+<!--section about-->
+<section class="about" id="about">
+    <h2 style="font-size: 3rem; color: white">V. 1.0</h2>
+
+    <!--    <img src="img/media-logo.png" alt="" style="width: 0; height: 0;">-->
+    <div class="container">
+        <h2>Обо мне</h2>
+        <p>Меня зовут Ирина Лапина. Я – магистр психологии и профессиональный коуч, сертифицированный по международным
+            стандартам ICF. Работа с людьми – мое призвание.</p>
+        <p>В своей практике я использую навыки и знания из коучинга,
+            психоаналитики, квантовой психологии нейро-лингвистического программирования,
+            когнитивно-поведенческой и позитивной психотерапии.
+        </p>
+        <p>Для каждого клиента применяю персональный и уникальный коктейль из этих знаний.
+        </p>
+    </div>
+</section>
+
+<section class="about" id="about-2">
+    <h2 style="font-size: 3rem; color: white">V. 1.1</h2>
+    <!--    <img src="img/media-logo.png" alt="" style="width: 0; height: 0;">-->
+    <div class="container">
+        <div class="about-rounds grid">
+            <div class="icf">
+                <img src="img/ICF.png" alt="">
+            </div>
+            <div class="skills">
+                <div class="fa fa-lightbulb-o"></div>
+            </div>
+            <div class="attitude">
+                <div class="fa fa-male"></div>
+            </div>
+            <p>Меня зовут Ирина Лапина. Я – магистр психологии и профессиональный коуч, сертифицированный по
+                международным
+                стандартам ICF. Работа с людьми – мое призвание.</p>
+            <p>В своей практике я использую навыки и знания из коучинга,
+                психоаналитики, квантовой психологии нейро-лингвистического программирования,
+                когнитивно-поведенческой и позитивной психотерапии.
+            </p>
+            <p>Для каждого клиента применяю персональный и уникальный коктейль из этих знаний.
+        </div>
+    </div>
+</section>
+
+<!--section footer-->
+<section class="services" id="services">
+    <h2 class="services-title">Услуги</h2>
+    <div class="container">
+        <div class="psycho-couching grid">
+            <div class="psycho-title">
+                <h4>Психология и коучинг</h4>
+            </div>
+            <div class="confidential">
+                <div class="fa fa-user-secret"></div>
+            </div>
+            <div class="free-session">
+                <div class="fa fa-money"></div>
+            </div>
+            <div class="online">
+                <div class="fa fa-headphones"></div>
+            </div>
+            <p>Полная конфиденциальность</p>
+            <p>Первая сессия – бесплатно</p>
+            <p>Онлайн <br>или очно (Киев)</p>
+
+        </div>
+        <div class="author-training grid">
+            <h4 class="author-title">Авторские тренинги</h4>
+            <div class="corporate">
+                <div class="author-icon">
+                    <div class="fa fa-group"></div>
+                </div>
+                <p>Корпоративные:</p>
+                <ul>
+                    <li>обучение тонкостям работы в luxury и premium сегментах</li>
+                    <li>развитие эмоционального интеллекта</li>
+                    <li>обучение искусству продаж</li>
+                </ul>
+            </div>
+            <div class="personal">
+                <div class="author-icon">
+                    <div class="fa fa-user"></div>
+                </div>
+                <p>Личные:</p>
+                <ul>
+                    <li>гармонизация личных отношений</li>
+                    <li>раскрытие таланта любить свою жизнь</li>
+                    <li>повышение личной ценности</li>
+                </ul>
+            </div>
+            <div class="orange-button">Запись на сессию</div>
+            <div class="orange-button">Оставить заявку</div> <!--дубль кноки Зпись на сессию-->
+        </div>
+
+    </div>
+</section>
+
+<footer class="contacts grid" id="contacts">
+    <h2>Контакты</h2>
+    <div class="container grid">
+        <div class="contacts__text">
+            <p>Все лучшее в жизни с нами происходит случайно.<br>
+                Но для того, чтобы эта случайность произошла,<br>
+                нужно позволить ей случиться.
+            </p>
+        </div>
+        <div class="contacts__icons grid">
+            <a class='mail' href="mailto:office@a15.org.ua">
+                <img src="img/mail.svg" alt="" class="contacts__social-mail">
+            </a>
+            <a href="https://twitter.com/a15org " target="_blank" class="contacts__social-tw">
+                <img src="img/Twitter-white.svg"
+                     class='social-item contacts__social-tw-icon'
+                     alt="">
+            </a>
+            <div href="https://t.me/a15org" target="_blank" class="contacts__social-tele">
+                <img src="img/Telegram-white.svg"
+                     class='social-item contacts__social-tele-icon'
+                     alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-copy">Все права защищены. Coach Partner ©</div>
+</footer>
+
+
+<!--./section contacts-->
+
+<!-- lower footer -->
+<!--<footer class="lower-footer">-->
+<!--    <div class="container">-->
+<!--        <div class="footer-copy">Всі права захищені. a15 ©</div>-->
+<!--    </div>-->
+<!--</footer>-->
+
+<script src="js/scripts.min.js"></script>
+<link rel="stylesheet" href="css/font-awesome.min.css">
+
+</body>
+</html>
