@@ -112,11 +112,11 @@
       .slider__slides {
         margin-top: 3rem; } }
   .slider__slide {
-    flex: 1 0 100%;
-    margin-right: 10rem; }
+    flex: 1 0 90%;
+    margin-right: 15rem; }
     @media only screen and (max-width: 63em) {
       .slider__slide {
-        flex: 1 0 100%; } }
+        flex: 1 0 90%; } }
   .slider__slide-content {
     display: flex;
     justify-content: center;
@@ -266,7 +266,7 @@
     .testimonial__cite--role {
       color: var(--grayish-blue); }
   .testimonial__img {
-    flex: 0 1 48.65%; }
+    flex: 0 1 8.65%; }
     @media only screen and (max-width: 63em) {
       .testimonial__img {
         flex: initial;
