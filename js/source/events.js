@@ -71,38 +71,3 @@ for (let i = 0; i < unba.length; i++) {
         unba[i].setAttribute('src', 'img/erau.svg')
     })
 }
-//more buttons in the Team section
-let extension = document.querySelectorAll('.extension');
-let more = document.querySelectorAll('.more');
-let three_dots = document.querySelectorAll('.three-dots');
-
-for (let i = 0; i < more.length; i++) {
-    more[i].addEventListener('click', () => {
-        extension[i].style.display = 'block';
-        more[i].style.display = 'none';
-        three_dots[i].style.display = 'none';
-    })
-}
-
-// //typing animation
-// let speed = 75;
-// let h1 = document.querySelector('.header-h1');
-// let delay = h1.innerHTML.length * speed + speed;
-//
-// function typeEffect(element, speed) {
-//     let text = element.innerHTML;
-//     element.innerHTML = "";
-//
-//     let i = 0;
-//     let timer = setInterval(() => {
-//         if (i < text.length) {
-//             element.append(text.charAt(i));
-//             i++;
-//         } else {
-//             clearInterval(timer);
-//         }
-//     }, speed);
-// }
-//
-// // type affect to header
-// typeEffect(h1, speed);
