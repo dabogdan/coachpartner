@@ -29,7 +29,7 @@
   padding: 0;
   background-repeat: no-repeat;
   background-position: bottom left;
-  background-color: #958b72;
+  background-color: #1a3a48;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,7 +134,7 @@
     display: flex;
     position: absolute;
     bottom: 6.5%;
-    right: 36%; }
+    left: 36%; }
     @media only screen and (max-width: 75em) {
       .slider__buttons {
         bottom: 7.5%; } }
@@ -258,13 +258,18 @@
         font-size: 1.2rem; } }
     .testimonial__cite--name {
       font-weight: 700;
-      margin-right: 8px; }
+      font-size: 1.5rem;
+      margin-right: 8px;
+      color: var(--grayish-blue);
+    }
       @media only screen and (max-width: 75em) {
         .testimonial__cite--name {
           margin-right: 0;
           display: block; } }
     .testimonial__cite--role {
-      color: var(--grayish-blue); }
+      color: var(--dark-grayish-blue);
+      font-size: 1rem;
+    }
   .testimonial__img {
     flex: 0 1 8.65%; }
     @media only screen and (max-width: 63em) {
