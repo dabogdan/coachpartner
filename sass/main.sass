@@ -34,29 +34,38 @@
     transition: .5s
     box-shadow: 0 0 5px rgba(0,0,0,0.5)
 
+.email
+  img
+    position: fixed
+    width: 50px
+    bottom: 5.5em
+    right: 1em
+    z-index: 10
+
+
 .active
   color: #aa7521
 
-.overlay
+.overlay, .overlay-package
   display: none
   position: absolute
   left: 0
   top: 0
   width: 100%
-  height: 100%
+  height: 1000000%
   background: rgba(0,0,0,0.8)
-  overflow-y: scroll
+  z-index: 2
   .appear
     display: block
   //.disappear
   //  display: none
   .overlay-content
     width: 100%
-    height: 100%
+    height: 100vh
     /* display: flex; */
     justify-content: center
     align-items: center
-  .form
+  .form, .form-package
     display: grid
     grid-auto-rows: max-content
     z-index: 30000
@@ -65,27 +74,25 @@
     height: 300px
     top: 50%
     left: 50%
-    //margin-right: -50%
     transform: translate(-50%, -50%)
     background-color: #e7e7dc
     padding: 1rem
     opacity: 1
     font-weight: 700
-    text-align: center
+    text-align: left
     .title-close
       display: grid
       grid-template-columns: 3fr 0.5fr
       .form-title
-        text-align: right
+        text-align: center
         align-content: center
-      .close-button
+      .close-button, .close-button-packages
         //grid-column: 1/3
         margin-top: 0.5rem
         width: 0.9rem
         float: right
         cursor: pointer
         opacity: 1
-
     .form-container
       grid-template-columns: 1fr 1fr
       grid-gap: 2em
@@ -103,6 +110,9 @@
       height: 60px
       padding: 1rem
       margin-left: 25%
+      line-height: 1.3
+  .form-package
+    height: 360px
 
 
 //  navbar
@@ -264,6 +274,7 @@
 
       .orange-button
         margin-top: 20px
+        z-index: 0
     .header-content
       background-image: url("../img/Lapina.jpg")
       background-size: cover
@@ -271,7 +282,7 @@
       background-repeat: no-repeat
 
 .about
-  padding: 0 0 5rem
+  padding: 0 0 3rem
   background: #3d5c6f
   .about-title
     font-size: 50px
@@ -314,6 +325,9 @@
       p
         font-size: 1rem
         padding: 0
+  .orange-button
+    margin: 3rem 0 0
+    width: 30%
 
 
 .services
@@ -454,16 +468,30 @@
     border-width: 5px
     font-size: 50px
   .container
-    grid-template-columns: 1fr 1fr
+    grid-template-columns: 1fr 2fr
     .contacts__text
+      grid-column: 1/2
       font-size: 18px
       font-weight: 500
       text-align: left
     .contacts__icons
+      grid-column: 1/2
       grid-template-columns: 1fr 1fr 1fr
       align-self: center
       width: 200px
       margin: 0 auto
+      a
+        color: white
+        font-size: 1.3rem
+        text-decoration: none
+        line-height: 1.2
+        &:hover
+          color: #aa7521
+    .orange-button
+      grid-column: 1/2
+    .insta-feed
+      grid-column: 2/3
+
 
 
   .footer-copy

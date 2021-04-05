@@ -31,6 +31,7 @@
 <!--scroll to Top button-->
 <div id="scrollTop" class="scrollTop" onclick="scrollUp()" style="display: none">вверх</div>
 
+
 <link rel="stylesheet" href="css/main.min.css">
 <link rel="stylesheet" href="css/burger/burger.css">
 
@@ -47,7 +48,34 @@
                 <input id="form-name" type="text" placeholder="Иванов Иван">
                 <label for="form-interest" class="form-description">Номер телефона: </label>
                 <input id="form-interest" type="text" placeholder="+38-050-555-55-55">
-                <div class="orange-button">Оставить заявку</div>
+                <div class="orange-button submitBtn">Оставить заявку</div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!--Форма записи-->
+<div class="overlay-package appear" id="overlay-package"><!--overlay appear - how to do this?-->
+    <div class="overlay-content">
+        <form action="" class="form-package grid">
+            <div class="title-close subitems">
+                <div><h3 class="form-title">Выбрать пакет</h3></div>
+                <div><img class='close-button-packages' src="img/close-button.svg" alt=""></div>
+            </div>
+            <div class="form-container grid">
+                <label for="form-package-name" class="form-description">Ваше имя: </label>
+                <input id="form-package-name" type="text" placeholder="Иванов Иван">
+                <label for="form-package-interest" class="form-description">Номер телефона: </label>
+                <input id="form-package-interest" type="text" placeholder="+38-050-555-55-55">
+                <label for="packages-input" class="form-description">Выберите пакет: </label>
+                <input type="text" list="packages" id="packages-input" placeholder="Выберите пакет">
+                <datalist id="packages">
+                    <option value="Базовый"></option>
+                    <option value="Стандарт"></option>
+                    <option value="Премиум"></option>
+                    <option value="Авторские курсы"></option>
+                </datalist>
+                <div class="orange-button packageBtn">Оставить заявку</div>
             </div>
         </form>
     </div>
@@ -90,14 +118,18 @@
     </div>
 </nav>
 
+<a class="email">
+    <img src="img/email.svg" alt="" class="email-img orderBtn">
+</a>
+
 <!--./nav-->
 <header class="main-header">
     <div class="container grid">
         <div class="tagline">
-            <p><span class="header-h1">Все проще, чем кажется!</span></p>
+            <p><span class="header-h1">Всё проще, чем кажется!</span></p>
             <p><span class="header-h2">Ирина Лапина - практикующий психолог</span></p>
             <a href="#overlay"> <!-- тут должна быть всплывающая Форма записи-->
-                <div class="orange-button">Запись на сессию</div>
+                <div class="orange-button orderBtn">Запись на сессию</div>
             </a>
             <p class="header-h3"><span>Первая сессия - всегда бесплатно.</span></p>
         </div>
@@ -144,10 +176,11 @@
                 психотерапии.
             </p>
             <p>Для каждого клиента применяю персональный и уникальный коктейль из этих знаний. <br>
-
                 Уверена, что личный психолог – не роскошь, а осознанная необходимость.
         </div>
+        <div class="orange-button orderBtn">Оставить заявку</div>
     </div>
+
 </section>
 
 <!--section footer-->
@@ -219,7 +252,7 @@
                         </ul>
                     </div>
                     <div class="btn">
-                        <a href="#">Заказать</a>
+                        <a class="order-package order-base">Заказать</a>
                     </div>
                 </div>
             </div>
@@ -243,7 +276,7 @@
                         </ul>
                     </div>
                     <div class="btn">
-                        <a href="#">Заказать</a>
+                        <a class="order-package order-standard">Заказать</a>
                     </div>
                 </div>
             </div>
@@ -266,33 +299,33 @@
                         </ul>
                     </div>
                     <div class="btn">
-                        <a href="#">Заказать</a>
+                        <a class="order-package order-premium">Заказать</a>
                     </div>
                 </div>
             </div>
             <!-- end of price tab-->
             <!--price tab-->
-                        <div class="plan ultimite">
-                            <div class="plan-inner">
-                                <div class="entry-title">
-                                    <h3>Авторские курсы</h3>
-                                    <div class="price"><p class="fa fa-shopping-bag"></p>
-                                    </div>
-                                </div>
-                                <div class="entry-content">
-                                    <ul>
-                                        <li><strong>Полная</strong> конфиденциальность</li>
-                                        <li>Цена <strong>договорная</strong></li>
-                                        <li>Удобное вам время</li>
-                                        <li>Онлайн (весь мир) или очно (Киев)</li>
-                                        <li>Постоянным клиентам <strong>скидки</strong></li>
-                                    </ul>
-                                </div>
-                                <div class="btn">
-                                    <a href="#">ЗАКАЗАТЬ</a>
-                                </div>
-                            </div>
+            <div class="plan ultimite">
+                <div class="plan-inner">
+                    <div class="entry-title">
+                        <h3>Авторские курсы</h3>
+                        <div class="price"><p class="fa fa-shopping-bag"></p>
                         </div>
+                    </div>
+                    <div class="entry-content">
+                        <ul>
+                            <li><strong>Полная</strong> конфиденциальность</li>
+                            <li>Цена <strong>договорная</strong></li>
+                            <li>Удобное вам время</li>
+                            <li>Онлайн (весь мир) или очно (Киев)</li>
+                            <li>Постоянным клиентам <strong>скидки</strong></li>
+                        </ul>
+                    </div>
+                    <div class="btn">
+                        <a class="order-package order-authors">ЗАКАЗАТЬ</a>
+                    </div>
+                </div>
+            </div>
             <!-- end of price tab-->
         </div>
     </div>
@@ -460,29 +493,31 @@
 
 <footer class="contacts grid" id="contacts">
     <h2>Контакты</h2>
+
     <div class="container grid">
-        <div class="contacts__text">
-            <p>Все лучшее в жизни с нами происходит случайно.<br>
-                Но для того, чтобы эта случайность произошла,<br>
-                нужно позволить ей случиться.
-            </p>
-            <p>Психолог онлайн всегда на расстоянии вытянутой руки.</p>
-        </div>
         <div class="contacts__icons grid">
             <a class='mail' href="mailto:iryna.lapina@outlook.com">
                 <img src="img/mail.svg" alt="" class="contacts__social-mail">
             </a>
-            <a href="https://twitter.com/a15org " target="_blank" class="contacts__social-tw">
-                <img src="img/Twitter-white.svg"
-                     class='social-item contacts__social-tw-icon'
-                     alt="">
+            <a href="https://www.facebook.com/%D0%98%D1%80%D0%B8%D0%BD%D0%B0-%D0%9B%D0%B0%D0%BF%D0%B8%D0%BD%D0%B0-%D0%9B%D0%B0%D0%B8%CC%86%D1%84-%D0%BA%D0%BE%D1%83%D1%87-100140775240184/"
+               target="_blank" class="contacts__social-tw fa fa-facebook-f">
             </a>
-            <a href="#" target="_blank" class="contacts__social-tele">
-                <img src="img/Telegram-white.svg"
-                     class='social-item contacts__social-tele-icon'
-                     alt="">
+            <a href="https://instagram.com/coach_partner?igshid=19yuxh2pea1t1" target="_blank"
+               class="contacts__social-tele fa fa-instagram">
             </a>
         </div>
+        <div class="contacts__text">
+            <p>Всё лучшее в жизни с нами происходит случайно.
+                Но для того, чтобы эта случайность произошла,
+                нужно позволить ей случиться.
+            </p>
+            <p>Психолог онлайн всегда на расстоянии вытянутой руки.</p>
+
+        </div>
+
+        <div class="orange-button orderBtn">Оставить заявку</div>
+        <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+        <div class="elfsight-app-d720a633-7e08-4691-9650-5512da142c83 insta-feed"></div>
     </div>
 
     <div class="footer-copy">Все права защищены. Coach Partner ©</div>
@@ -500,10 +535,8 @@
 
 <script src="js/scripts.min.js"></script>
 <link rel="stylesheet" href="css/font-awesome.min.css">
-<!--<link rel="stylesheet" href="css/slider.css">-->
 <link rel="stylesheet" href="css/prices.css">
 <link rel="stylesheet" href="css/testimonials.css">
-<!--<script src="js/source/slider.js"></script>-->
 
 </body>
 </html>

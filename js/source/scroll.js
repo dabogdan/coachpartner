@@ -4,18 +4,22 @@ window.onscroll = scrollUpButtonAppear;
 
 let toTop = document.getElementById('scrollTop');
 let navbar = document.getElementById('navbar');
+const emailOnscroll = document.querySelector('.email-img');
 
 function scrollUpButtonAppear() {
     if (screen.width > 480) {
         if (window.scrollY > 100) {
             toTop.style.display = 'block';
             navbar.className = 'navbar-onscroll'
+            emailOnscroll.style.bottom = '5.5em'
         } else {
             toTop.style.display = 'none';
             navbar.className = 'navbar'
+            emailOnscroll.style.bottom = '1em'
         }
     } else {
         navbar.className = 'navbar-onscroll'
+        emailOnscroll.style.bottom = '5.5em'
         navbar.style.opacity = '0.8';
         if (window.scrollY > 10) {
             toTop.style.display = 'block';
@@ -23,7 +27,6 @@ function scrollUpButtonAppear() {
             toTop.style.display = 'none';
         }
     }
-
 }
 
 function scrollUp() {
