@@ -8,7 +8,7 @@
 
 #price {
     text-align: center;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 20px;
     margin: 0 50px;
 }
@@ -22,7 +22,8 @@
 .plan-inner {
     background: #fff;
     margin: 0 auto;
-    min-width: 280px;
+    width: 250px;
+    min-width: 250px;
     max-width: 100%;
     position:relative;
 }
@@ -39,7 +40,7 @@
 
 .entry-title>h3 {
     background: #aa7521;
-    font-size: 20px;
+    font-size: 16px;
     padding: 5px 0;
     text-transform: uppercase;
     font-weight: 700;
@@ -80,6 +81,7 @@
     padding: 0;
     list-style: none;
     text-align: center;
+    font-size: 1rem;
 }
 
 .entry-content li {
@@ -148,13 +150,13 @@
 }
 
 .ultimite .entry-title > h3 {
-    background: #DD4B5E;
+    background: #958b72;
 }
 
 .ultimite .entry-title {
-    background: #F75C70;
+    background: #e7e7dc;
 }
 
 .ultimite .price {
-    background: #DD4B5E;
+    background: #958b72;
 }
