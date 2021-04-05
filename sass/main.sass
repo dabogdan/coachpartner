@@ -420,6 +420,7 @@
     font-size: 50px
   .container
     grid-template-columns: 1fr 2fr
+    grid-column-gap: 20px
     .contacts__text
       grid-column: 1/2
       font-size: 18px
@@ -430,12 +431,13 @@
       grid-template-columns: 1fr 1fr 1fr
       align-self: center
       margin: 0 auto
+      grid-gap: 5rem
       a
         color: white
         font-size: 3.3rem
         text-decoration: none
         line-height: 1.2
-        padding-right: 5rem
+
         &:hover
           color: #aa7521
         img
@@ -444,6 +446,9 @@
       grid-column: 1/2
     .insta-feed
       grid-column: 2/3
+      grid-row: 1/4
+      border: white solid 1px
+      color: white
 
 
 
