@@ -16,6 +16,9 @@ const orderPackage = document.querySelectorAll('.order-package');
 const overlayPackage = document.getElementById('overlay-package');
 const overlayPackCloseBtn = document.querySelector('.close-button-packages');
 
+const packagesList = document.querySelectorAll('.package-list')
+const packages = document.getElementById('packages');
+
 //
 // twContacts.addEventListener('mouseover', () => {
 //     twContacts.setAttribute('src', 'img/Twitter-orange.svg');
@@ -95,10 +98,17 @@ overlayCloseBtn.addEventListener('click', () => {
 })
 
 //same for overlay with packages
-orderPackage.forEach((e) => {
+orderPackage.forEach((e, i) => {
     e.addEventListener('click', () => {
         overlayPackage.style.display = 'block';
-        document.body.style.overflow = 'hidden'
+        document.body.style.overflow = 'hidden';
+        console.log(i, packages.options[i]);
+        packages.options.forEach((el) => {
+            el.removeAttribute('selected');
+        })
+
+        packages.options[i].setAttribute('selected', '');
+
     })
 })
 
