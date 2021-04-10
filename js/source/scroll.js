@@ -7,26 +7,26 @@ let navbar = document.getElementById('navbar');
 const emailOnscroll = document.querySelector('.email-img');
 
 function scrollUpButtonAppear() {
-    if (screen.width > 480) {
+    // if (screen.width > 320) {
         if (window.scrollY > 100) {
             toTop.style.display = 'block';
             navbar.className = 'navbar-onscroll'
             emailOnscroll.style.bottom = '5.5em'
-        } else {
+        } else if (window.scrollY < 100){
             toTop.style.display = 'none';
             navbar.className = 'navbar'
             emailOnscroll.style.bottom = '1em'
         }
-    } else {
-        navbar.className = 'navbar-onscroll'
-        emailOnscroll.style.bottom = '5.5em'
-        navbar.style.opacity = '0.8';
-        if (window.scrollY > 10) {
-            toTop.style.display = 'block';
-        } else {
-            toTop.style.display = 'none';
-        }
-    }
+    // } else {
+    //     navbar.className = 'navbar-onscroll'
+    //     emailOnscroll.style.bottom = '5.5em'
+    //     navbar.style.opacity = '0.8';
+    //     if (window.scrollY > 10) {
+    //         toTop.style.display = 'block';
+    //     } else {
+    //         toTop.style.display = 'none';
+    //     }
+    // }
 }
 
 function scrollUp() {
@@ -41,16 +41,14 @@ function scrollUp() {
 }
 
 // ------------------------- CHANGE ACTIVE STATE OF LINKS ON SCROLL ------------------------- //
-//select the navigation
-const nav = document.querySelector('.navbar');
+// select the navigation
+// const nav = document.querySelector('.navbar');
 
 // --------------------- INITIALIZE CHRIS FERDINANDI'S SMOOTH SCROLL VANILLA JS LIBRARY --------------------- //
-if (screen.width > 480) {
-    const scroll = new SmoothScroll('a[href*="#"]', {offset: nav.offsetHeight - 40});
-}
-if (screen.width <= 480) {
-    const scroll = new SmoothScroll('a[href*="#"]', {offset: nav.offsetHeight-80});
-}
+
+const scroll = new SmoothScroll('a[href*="#"]', {
+        header: '[data-scroll-header]'
+    });
 
 
 

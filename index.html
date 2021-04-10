@@ -10,7 +10,9 @@
 
     <!--    <meta name="description" content="">-->
 
-    <!--    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
     <!--    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">-->
 
     <!--    <meta property=”og:title” content=”A15” />-->
@@ -31,21 +33,23 @@
 <!--scroll to Top button-->
 <div id="scrollTop" class="scrollTop" onclick="scrollUp()" style="display: none">вверх</div>
 
-
-<link rel="stylesheet" href="css/main.min.css">
+<link rel="stylesheet" href="css/prices.css">
+<link rel="stylesheet" href="css/testimonials.css">
 <link rel="stylesheet" href="css/burger/burger.css">
+<link rel="stylesheet" href="css/main.min.css">
+
 
 <!--Форма записи-->
 <div class="overlay appear" id="overlay"><!--overlay appear - how to do this?-->
     <div class="overlay-content">
-        <form action="" class="form grid">
+        <form action="" class="form grid sendMail" method="post" enctype="multipart/form-data">
             <div class="title-close subitems">
                 <div><h3 class="form-title">Запись на бесплатную сессию</h3></div>
                 <div><img class='close-button' src="img/close-button.svg" alt=""></div>
             </div>
             <div class="form-container grid">
                 <label for="form-name" class="form-description">Ваше имя: </label>
-                <input id="form-name" type="text" placeholder="Иванов Иван">
+                <input id="form-name" type="text" placeholder="имя...">
                 <label for="form-interest" class="form-description">Номер телефона: </label>
                 <input id="form-interest" type="text" placeholder="+38-050-555-55-55">
                 <div class="orange-button submitBtn">Оставить заявку</div>
@@ -64,7 +68,7 @@
             </div>
             <div class="form-container grid">
                 <label for="form-package-name" class="form-description">Ваше имя: </label>
-                <input id="form-package-name" type="text" placeholder="Иванов Иван">
+                <input id="form-package-name" type="text" placeholder="имя...">
                 <label for="form-package-interest" class="form-description">Номер телефона: </label>
                 <input id="form-package-interest" type="text" placeholder="+38-050-555-55-55">
                 <label for="packages" class="form-description">Выберите пакет: </label>
@@ -82,7 +86,7 @@
 
 
 <!--nav-->
-<nav class="navbar" id="navbar">
+<nav class="navbar" id="navbar" data-scroll-header >
     <div class="navigation grid">
         <a href="#" class="logo" id="top"></a> <!--сделать кликабельным лого с #top-->
         <div class="menu">
@@ -110,8 +114,10 @@
                 <li><a class="menu__item" href="#about">Обо мне</a></li>
                 <li><a class="menu__item" href="#services">Цены</a></li>
                 <li><a class="menu__item" href="https://" target="_blank">Блог</a></li>
-                <li><a href="#section6">Отзывы</a></li>
+                <li><a class="menu__item" href="#section6">Отзывы</a></li>
                 <li><a class="menu__item" href="#contacts">Контакты</a></li>
+                <li><a href="https://instagram.com/coach_partner?igshid=19yuxh2pea1t1" class="fa fa-instagram insta-header menu__item"
+                   style="font-size: 2rem;display: block;" target="_blank"></a></li>
             </ul>
         </div>
     </div>
@@ -537,8 +543,7 @@
 
 <script src="js/scripts.min.js"></script>
 <link rel="stylesheet" href="css/font-awesome.min.css">
-<link rel="stylesheet" href="css/prices.css">
-<link rel="stylesheet" href="css/testimonials.css">
+
 
 </body>
 </html>

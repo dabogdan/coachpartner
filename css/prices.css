@@ -1,11 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 
-/*body {*/
-/*    background: #F2F2F2;*/
-/*    padding: 0;*/
-/*    maring: 0;*/
-/*}*/
-
 #price {
     text-align: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -15,7 +9,6 @@
 
 .plan {
     display: inline-block;
-    margin: 10px 1%;
     font-family: 'Lato', Arial, sans-serif;
 }
 

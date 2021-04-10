@@ -276,14 +276,14 @@
     }
 }
 
-@media all and (max-width: 900px) {
-    .col-5 .col {
+@media all and (max-width: 992px) {
+    .col-3 .col {
         width: 50%;
     }
 }
 
-@media all and (max-width: 600px) {
-    .col-5 .col {
+@media all and (max-width: 768px) {
+    .col-3 .col {
         width: 100%;
     }
 }
