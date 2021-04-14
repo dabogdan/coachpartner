@@ -4,162 +4,400 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
+  .navbar
+    .navigation
+      grid-template-columns: 2fr 3fr .7fr
+      min-width: auto
+      .menu
+        padding: 1.3rem 0
+        a
+          font-size: 17px
+
+  .navbar-onscroll
+    .navigation
+      grid-template-columns: 2fr 3fr .7fr
+      min-width: auto
+      .menu
+        padding: 1.3rem 0
+        a
+          font-size: 17px
+    .lang-menu
+      margin: 1.4rem 0.5rem
+
   .main-header
     line-height: 1
-    .header-content
-      .header-h1
-        font-size: 3rem
-      .blinking-cursor
-        font-size: 3rem
+
+  .about
+    .container
+      padding: 2rem
+      .about-rounds
+        grid-template-columns: repeat(3, 1fr)
+
+  .services
+    .container
+      #price
+        margin: 0 auto
+        padding: 0 1rem
+        .plan
+          .plan-inner
+            width: inherit
+            min-width: 220px
+            .entry-content
+              ul
+                font-size: 14px
+
+    .header-h1
+      font-size: 2.2rem
+
+  #section6
+    position: relative
+    h2
+      left: 50%
+      top: 2.5%
+      transform: translate(-50%, -50%)
+    .flex
+      min-width: auto
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
   .navbar
     .navigation
+      grid-template-columns: 3fr 5fr 1fr
+      min-width: auto
+      max-width: 992px
+      margin: 0
+      .logo
+        background-image: url("../img/logotip-white.svg")
+        margin: 0 .5rem
       .menu
-        padding: 2rem 0
+        text-align: center
+        padding: .7rem 0 1rem
         a
-          font-size: 1rem
+          font-size: 14px
+      .lang-menu
+        padding: .4rem 0
+        text-align: center
+        margin: .9rem 0 0
 
+  .navbar-onscroll
+    .navigation
+      grid-template-columns: 3fr 5fr 1fr
+      min-width: 769px
+      max-width: 992px
+      margin: 0
+      .logo
+        background-image: url("../img/logotip.svg")
+        margin: 0 .5rem
+      .menu
+        text-align: center
+        padding: .7rem 0 1rem
+        a
+          font-size: 14px
+          margin: .2rem .5rem
+      .lang-menu
+        padding: .4rem 0
+        text-align: center
+        margin: .6rem 0 0
   .main-header
-    .header-content
-      .header-h1
-        font-size: 2.5rem
-      .blinking-cursor
-        font-size: 2.5rem
-  .team
     .container
-      grid-template-columns: .5fr 2fr
-      grid-gap: 2rem
-      padding: 4rem 5% 2rem
-      .team__picture
-        height: 10rem
-        width: 10rem
-        img
-          width: 10rem
-      .team__description
-        h3
-          line-height: 1.3
-        h5
-          font-size: 1.2rem
-        .team__social
-          margin-left: -10px
-      .bio
-        grid-column: 1/3
-        padding-left: 50px
-        li
-          margin-left: -31px
+      grid-template-columns: 1fr
+      position: relative
+      .tagline
+        position: absolute
+        top: 65%
+        left: 50%
+        transform: translate(-50%, -50%)
+        color: white
+        z-index: 1
+      .header-content
+        width: 100%
+        margin: 0
+        &:after
+          content: ''
+          position: absolute
+          background-size: cover
+          background-color: rgba(0,0,0,.2)
+          width: 100%
+          height: 100%
+          left: 0
+
+  .about
+    .container
+      .about-rounds
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 2rem
+        padding: 4rem 5% 2rem
+    .orange-button
+      padding: 10px
+
+  .services
+    .container
+      padding: 0 1rem 1rem
+      .author-training
+        width: 90%
+      #price
+        grid-template-columns: 1fr 1fr
+        grid-column-gap: 0
+        grid-row-gap: 2rem
+        margin: 0 auto
+        .plan
+          .plan-inner
+            max-width: 350px
+            align-items: center
+            .entry-content
+              ul
+                font-size: 16px
+
   .contacts
     .container
       display: block
       padding: 0 5%
-      //grid-template-columns: 1fr
+      grid-template-columns: 1fr
+      .contacts__icons
+        width: 320px
+        grid-gap: 0
+        padding: 1rem
       .contacts__title
         grid-column: 1
+      .contacts__text
+        text-align: center
+      .insta-feed
+        margin: 3rem auto 0
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
   .navbar
     .navigation
-      grid-template-columns: 1fr 6fr 1fr
+      grid-template-columns: 4fr 6fr 1fr
       .logo
         font-size: 20px
-        padding: 1rem 0 0 0
+        margin: 0 0 0 1rem
       .menu
-        padding: 1.3rem 0
+        display: none
         a
           font-size: 12px
           margin: 0 .5rem
       .lang-menu
-        padding: 0
-        margin: 1.3rem .5rem 0 0
+        padding: 0 0 0 4rem
+        margin: .7rem .5rem .7rem 0
+        text-align: left
+      .hamburger-menu
+        display: block
+        position: relative
+        .menu__btn
+          span
+            background-color: white
+            &:before
+              background-color: white
+            &:after
+              background-color: white
+        .menu__box
+          background-color: rgba(0,0,0,0.7)
+          right: 0
+          width: 480px
   .navbar-onscroll
     .navigation
-      grid-template-columns: 1fr 6fr 1fr
+      grid-template-columns: 4fr 6fr 1fr
       .logo
         font-size: 20px
         padding: .7rem 0 0 0
+        margin: 0 0 0 1rem
       .menu
-        padding: 1rem 0
-        a
-          font-size: 12px
-          margin: 0 .5rem
+        display: none
       .lang-menu
-        margin: 1rem .5rem 0 0
+        margin: .7rem .5rem .7rem 0
+        padding: 0 0 0 4rem
+        text-align: left
+      .hamburger-menu
+        display: block
+        .menu__btn
+          span
+            background-color: #153b47
+            &:before
+              background-color: #153b47
+            &:after
+              background-color: #153b47
+        .menu__box
+          background-color: rgba(0,0,0,.7)
+          width: 480px
+          padding: 7% 0 0
+
   .main-header
-    .header-content
-      margin-top: 100px
-      .header-h1
-        font-size: 1.6rem
+    .container
+      grid-template-columns: 1fr
+      position: relative
+      .tagline
+        width: 90%
   .about
     .container
       p
         font-size: 20px
-  .team
-    .container
-      grid-template-columns: 1fr
-      .team__title
-        grid-column: 1/2
-        text-align: center
-      .team__description
-        .team__social
-          justify-content: center
-        h3, h5
+      .about-rounds
+        grid-template-columns: 350px
+        padding-top: 0
+        p
           text-align: center
-      .team__picture
+        div
+          &:nth-child(1)
+            grid-row: 1/2
+          &:nth-child(2)
+            grid-row: 3/4
+          &:nth-child(3)
+            grid-row: 5/6
+          &:nth-child(4)
+            grid-row: 2/3
+          &:nth-child(5)
+            grid-row: 4/5
+          &:nth-child(6)
+            grid-row: 6/7
+      .orange-button
+        width: 250px
+
+  .services
+    .container
+      .author-training
+        grid-template-columns: 1fr
+        grid-gap: 0
         margin: 0 auto
-        width: 18rem
-        height: 18rem
-        img
-          width: 18rem
-      .bio
-        grid-column: 1/1
+        padding: 0 1rem
+        .corporate, .personal
+          ul
+            margin: 0 auto
+        .personal
+          ul
+            margin-bottom: 2rem
+        .author-title
+          grid-column: 1/2
+      #price
+        grid-template-columns: 1fr 1fr
+        grid-gap: 10px
+        padding: 0 10px
+        .plan
+          .plan-inner
+            max-width: 350px
+            min-width: 200px
+            align-items: center
+            .entry-content
+              ul
+                font-size: 14px
+
+  #section6
+    .testName
+      top: 70%
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-  .scrollTop
-    bottom: 5em
 
   .navbar
-    top: auto
-    bottom: 0
-    padding-bottom: 1rem
     .navigation
-      .menu
-        display: none
-      .lang-menu
-        grid-column: 2/3
-        text-align: center
+      grid-template-columns: 4fr 6fr 1fr
       .hamburger-menu
-        display: block
+        .menu__box
+          background-color: rgba(0,0,0,.9)
+          width: 100vw
 
   .navbar-onscroll
-    top: auto
-    bottom: 0
-    padding-bottom: 1rem
     .navigation
-      .logo
-        padding-top: 1rem
-      .menu
-        display: none
-      .lang-menu
-        grid-column: 2/3
-        text-align: center
-        padding: .3rem 0 0 0
+      grid-template-columns: 4fr 6fr 1fr
       .hamburger-menu
-        display: block
+        .menu__box
+          background-color: rgba(0,0,0,.9)
+          width: 100%
+
+  .overlay
+    .overlay-content
+      form
+        width: 95%
+        height: auto
+        padding: .5rem
+        .form-container
+          grid-template-columns: .5fr 1fr
+          grid-gap: .5rem
+          .orange-button
+            margin: .5rem auto
+        .title-close
+          .close-button
+            margin-right: 1rem
+  .overlay-package
+    .overlay-content
+      form
+        width: 95%
+        height: auto
+        padding: .5rem
+        .form-container
+          grid-template-columns: .5fr 1fr
+          grid-gap: .5rem
+          .orange-button
+            margin: .5rem auto
+        .title-close
+          .close-button
+            margin-right: 1rem
+  .navbar
+    .navigation
+      grid-template-columns: 6fr 8fr 1fr
+      .lang-menu
+        padding-left: 2rem
+        a
+          font-size: .8rem
+
+  .navbar-onscroll
+    .navigation
+      grid-template-columns: 2fr 8fr 1fr
+      .lang-menu
+        padding-left: 2rem
+        a
+          font-size: .8rem
+
   .main-header
-    .header-content
-      .header-h1
-        font-size: 1.2rem
+    .container
+      .tagline
+        top: 55%
+        .header-h2
+          font-size: 1.2rem
+        .orange-button
+          padding: 15px 20px
+
+  .services
+    .container
+      .author-training
+        margin: 0
+        padding: 0
+        width: 100%
+        //.corporate, .personal
+        ul
+          margin: 0
+          li
+            padding-left: 0
+      #price
+        grid-template-columns: 1fr
 
   .about
     .container
       p
         font-size: 14px
+      .about-rounds
+        grid-template-columns: 320px
+        padding: 0 1rem
+        p
+          padding: 0 1rem
+        .orange-button
+          width: 200px
+
+  #section6
+    .flex
+      .col
+        .testText
+          .inner
+            font-size: .6rem
+
   .contacts
     padding-bottom: 50px
+    .container
+      margin: 0
+      .contacts__icons
+        width: auto
+
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)

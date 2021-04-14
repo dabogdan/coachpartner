@@ -31,58 +31,13 @@
 
 <body>
 <!--scroll to Top button-->
-<div id="scrollTop" class="scrollTop" onclick="scrollUp()" style="display: none">вверх</div>
+<div id="scrollTop" class="scrollTop" onclick="scrollUp()" style="display: none">вгору</div>
 
 <link rel="stylesheet" href="css/prices.css">
 <link rel="stylesheet" href="css/testimonials.css">
 <link rel="stylesheet" href="css/burger/burger.css">
 <link rel="stylesheet" href="css/main.min.css">
 
-
-<!--Форма записи-->
-<div class="overlay appear" id="overlay"><!--overlay appear - how to do this?-->
-    <div class="overlay-content">
-        <form action="" class="form grid sendMail" method="post" enctype="multipart/form-data">
-            <div class="title-close subitems">
-                <div><h3 class="form-title">Запись на бесплатную сессию</h3></div>
-                <div><img class='close-button' src="img/close-button.svg" alt=""></div>
-            </div>
-            <div class="form-container grid">
-                <label for="form-name" class="form-description">Ваше имя: </label>
-                <input id="form-name" type="text" placeholder="имя...">
-                <label for="form-interest" class="form-description">Номер телефона: </label>
-                <input id="form-interest" type="text" placeholder="+38-050-555-55-55">
-                <div class="orange-button submitBtn">Оставить заявку</div>
-            </div>
-        </form>
-    </div>
-</div>
-
-<!--Форма записи-->
-<div class="overlay-package appear" id="overlay-package"><!--overlay appear - how to do this?-->
-    <div class="overlay-content">
-        <form action="" class="form-package grid">
-            <div class="title-close subitems">
-                <div><h3 class="form-title">Выбрать пакет</h3></div>
-                <div><img class='close-button-packages' src="img/close-button.svg" alt=""></div>
-            </div>
-            <div class="form-container grid">
-                <label for="form-package-name" class="form-description">Ваше имя: </label>
-                <input id="form-package-name" type="text" placeholder="имя...">
-                <label for="form-package-interest" class="form-description">Номер телефона: </label>
-                <input id="form-package-interest" type="text" placeholder="+38-050-555-55-55">
-                <label for="packages" class="form-description">Выберите пакет: </label>
-                <select id="packages">
-                    <option class="package-list" value="Базовый">Базовый</option>
-                    <option class="package-list" selected value="Стандарт">Стандарт</option>
-                    <option class="package-list" value="Премиум">Премиум</option>
-                    <option class="package-list" value="Авторские курсы">Авторские курсы</option>
-                </select>
-                <div class="orange-button packageBtn">Оставить заявку</div>
-            </div>
-        </form>
-    </div>
-</div>
 
 
 <!--nav-->
@@ -141,23 +96,8 @@
         <div class="header-content"></div>
     </div>
 </header>
-<!--section about-->
-<!--<section class="about" id="about">-->
-<!--    <h2 style="font-size: 3rem; color: white">V. 1.0</h2>-->
 
-<!--    &lt;!&ndash;    <img src="img/media-logo.png" alt="" style="width: 0; height: 0;">&ndash;&gt;-->
-<!--    <div class="container">-->
-<!--        <h2>Обо мне</h2>-->
-<!--        <p>Я – профессиональный психолог и коуч, сертифицированный по международным стандартам ICF. Практикую в Киеве и-->
-<!--            онлайн по всему миру. Работа с людьми – мое призвание. </p>-->
-<!--        <p>В своей практике я использую навыки и знания из коучинга,-->
-<!--            психоаналитики, квантовой психологии нейро-лингвистического программирования,-->
-<!--            когнитивно-поведенческой и позитивной психотерапии.-->
-<!--        </p>-->
-<!--        <p>Для каждого клиента применяю персональный и уникальный коктейль из этих знаний.-->
-<!--        </p>-->
-<!--    </div>-->
-<!--</section>-->
+
 
 <section class="about" id="about">
     <!--    <h2 style="font-size: 3rem; color: white">V. 1.1</h2>-->
@@ -187,6 +127,26 @@
     </div>
 
 </section>
+
+<!--cookie notice-->
+<div id="cookie" class="cookie">
+    <div class="cookies-close" onclick="agreeCookiesButton()">
+        Закрыть [x]
+    </div>
+    <div class="cookies-notice">
+        Мы используем куки (cookies), чтобы вы получали найлучший опыт на нашем вебсайте. Если вы продолжаете
+        использовать этот веб сайт, то для нас это будет означать, что вы принимаете эти условия.
+    </div>
+    <div class="cookies-buttons">
+    <span class="cookies-button" onclick="agreeCookiesButton()">
+        Понятно
+    </span>
+        <span class="cookies-button-more">
+            <a href="privacy-policy.html" target="_blank">Узнать больше</a>
+        </span>
+    </div>
+</div>
+<!--<script src="./js/cookies.js"></script>-->
 
 <!--section footer-->
 <section class="services" id="services">
@@ -495,6 +455,53 @@
         <!--        </div>-->
     </div>
 </section>
+
+
+<!--Форма записи-->
+<div class="overlay appear" id="overlay"><!--overlay appear - how to do this?-->
+    <div class="overlay-content">
+        <form action="" class="form grid sendMail" method="post" enctype="multipart/form-data">
+            <div class="title-close subitems">
+                <div><h3 class="form-title">Запись на бесплатную сессию</h3></div>
+                <div><img class='close-button' src="img/close-button.svg" alt=""></div>
+            </div>
+            <div class="form-container grid">
+                <label for="form-name" class="form-description">Ваше имя: </label>
+                <input id="form-name" type="text" placeholder="имя...">
+                <label for="form-interest" class="form-description">Номер телефона: </label>
+                <input id="form-interest" type="text" placeholder="+38-050-555-55-55">
+                <div class="orange-button submitBtn">Оставить заявку</div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!--Форма записи-->
+<div class="overlay-package appear" id="overlay-package"><!--overlay appear - how to do this?-->
+    <div class="overlay-content">
+        <form action="" class="form-package grid">
+            <div class="title-close subitems">
+                <div><h3 class="form-title">Выбрать пакет</h3></div>
+                <div><img class='close-button-packages' src="img/close-button.svg" alt=""></div>
+            </div>
+            <div class="form-container grid">
+                <label for="form-package-name" class="form-description">Ваше имя: </label>
+                <input id="form-package-name" type="text" placeholder="имя...">
+                <label for="form-package-interest" class="form-description">Номер телефона: </label>
+                <input id="form-package-interest" type="text" placeholder="+38-050-555-55-55">
+                <label for="packages" class="form-description">Выберите пакет: </label>
+                <select id="packages">
+                    <option class="package-list" value="Базовый">Базовый</option>
+                    <option class="package-list" selected value="Стандарт">Стандарт</option>
+                    <option class="package-list" value="Премиум">Премиум</option>
+                    <option class="package-list" value="Авторские курсы">Авторские курсы</option>
+                </select>
+                <div class="orange-button packageBtn">Оставить заявку</div>
+            </div>
+        </form>
+    </div>
+</div>
+
 
 <footer class="contacts grid" id="contacts">
     <h2>Контакты</h2>
