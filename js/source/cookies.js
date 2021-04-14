@@ -1,5 +1,4 @@
 const cookieBanner = document.getElementById('cookie');
-console.log(cookieBanner)
 
 let agreeCookiesButton = () => {
     localStorage.setItem('cookies_enabled', '1');
