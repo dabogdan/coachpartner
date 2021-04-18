@@ -1,6 +1,6 @@
-let mailContacts = document.querySelector('.contacts__social-mail');
-let menuBox = document.querySelector('.menu__box');
-let menuToggle = document.querySelector('#menu__toggle');
+const mailContacts = document.querySelector('.contacts__social-mail');
+const menuBox = document.querySelector('.menu__box');
+const menuToggle = document.querySelector('#menu__toggle');
 
 const orderBtn = document.querySelectorAll('.orderBtn');
 const overlay = document.getElementById('overlay');
@@ -11,7 +11,6 @@ const overlayPackage = document.getElementById('overlay-package');
 const overlayPackCloseBtn = document.querySelector('.close-button-packages');
 
 const packages = document.getElementById('packages');
-
 
 mailContacts.addEventListener('mouseover', () => {
     mailContacts.setAttribute('src', 'img/mail-orange.svg');
@@ -33,10 +32,18 @@ orderBtn.forEach((e) => {
     })
 })
 
-overlayCloseBtn.addEventListener('click', () => {
+const closingOverlayArray = [
+    overlay,
+    overlayPackage,
+    overlayPackCloseBtn,
+    overlayCloseBtn,
+]
+
+const closeOverlay = () => {
     overlay.style.display = 'none';
+    overlayPackage.style.display = 'none';
     document.body.style.overflow = 'auto'
-})
+}
 
 //same for overlay with packages
 orderPackage.forEach((e, i) => {
@@ -50,7 +57,10 @@ orderPackage.forEach((e, i) => {
     })
 })
 
-overlayPackCloseBtn.addEventListener('click', () => {
-    overlayPackage.style.display = 'none';
-    document.body.style.overflow = 'auto'
+closingOverlayArray.forEach((e) => {
+    e.addEventListener('click', (event) => {
+        if (event.target === e || event.target.className === 'overlay-content'){
+            closeOverlay();
+        }
+    });
 })

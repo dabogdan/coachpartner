@@ -45,8 +45,16 @@ $message = '<p>Новое сообщение с формы обратной св
 // Прикрепим все данные из формы
 $message .= \modules\mail\services\sMail::instance()->getBlockBuffer($data);
 
+$message2 = '<h1> Здравствуйте!</h1>
+            <p> Спасибо за Вашу заявку на моем сайте.</p>
+            <p>Я свяжусь с Вами в ближайшее время.</p>
+            <p>С уважением,</p>
+            <p>Ирина Лапина</p>';
+
 
 \core\PHPMail::instance()->sendSMTPMail($emailto, 'Новое сообщение с сайта '.$_SERVER['HTTP_HOST'], $message, $attachments);
+
+\core\PHPMail::instance()->sendSMTPMail($data['email'], 'Ваша заявка', $message2, $attachments);
 
 echo json_encode(['error' => 0, 'data' => 'Сообщение успешно отправлено']);
 exit();

@@ -15,16 +15,17 @@
 
     <!--    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">-->
 
-    <!--    <meta property=”og:title” content=”A15” />-->
-    <!--    <meta property=”og:url” content=”https://a15.org.ua” />-->
-    <!--    <meta property=”og:description” content= ”Ви інформуєте, ми — захищаємо.” />-->
-    <!--    <meta property=”og:image” content=”img/media-logo.png”/>-->
-    <!--    <meta property=”og:type” content=”article” />-->
-    <!--&lt;!&ndash;twitter&ndash;&gt;-->
-    <!--    <meta property=”twitter:title” content=”A15” />-->
-    <!--    <meta property=”twitter:url” content=”https://a15.org.ua” />-->
-    <!--    <meta property=”twitter:description” content= ”Ви інформуєте, ми — захищаємо.” />-->
-    <!--    <meta property=”twitter:image” content=”img/media-logo.png”/>-->
+    <meta property=”og:title” content=”Coachpartner” />
+    <meta property=”og:url” content=”https://coachpartner.live/img/Lapina.jpg” />
+    <meta property=”og:description” content= "Веб сайт професійного коуча и психолога Ірини Лапіної." />
+    <meta property=”og:image” content=”img/Lapina.jpg” />
+    <meta property=”og:type” content=”article” />
+    <!--twitter-->
+    <meta property=”twitter:title” content=”Coachpartner” />
+    <meta property=”twitter:url” content=”https://coachpartner.live/img/Lapina.jpg” />
+    <meta property=”twitter:description” content= "Веб сайт професійного коуча и психолога Ірини Лапіної." />
+    <meta property=”twitter:image” content=”img/Lapina.jpg” />
+
 
 
 </head>
@@ -46,14 +47,14 @@
         <div class="menu">
             <a href="#about">Про мене</a>
             <a href="#services">Ціни</a>
-            <a href="https://" target="_blank">Блог</a>
+            <a href="https://coachpartner.live/blog" target="_blank">Блог</a>
             <a href="#section6">Відгуки</a>
             <a href="#contacts">Контакти</a>
             <a href="https://instagram.com/coach_partner?igshid=19yuxh2pea1t1" class="fa fa-instagram insta-header"
                style="font-size: 2rem;" target="_blank"></a>
         </div>
         <div class="lang-menu">
-            <a href="./../index.html" class="">RU</a>
+            <a href="../" class="">RU</a>
             <span>|</span>
             <a href="" class="active">UA</a>
         </div>
@@ -67,7 +68,7 @@
             <ul class="menu__box">
                 <li><a class="menu__item" href="#about">Про мене</a></li>
                 <li><a class="menu__item" href="#services">Ціни</a></li>
-                <li><a class="menu__item" href="https://" target="_blank">Блог</a></li>
+                <li><a class="menu__item" href="https://coachpartner.live/blog" target="_blank">Блог</a></li>
                 <li><a class="menu__item" href="#section6">Відгуки</a></li>
                 <li><a class="menu__item" href="#contacts">Контакти</a></li>
                 <li><a href="https://instagram.com/coach_partner?igshid=19yuxh2pea1t1"
@@ -150,25 +151,6 @@
 <section class="services" id="services">
     <h2 class="services-title">Ціни</h2>
     <div class="container">
-        <!--        <div class="psycho-couching grid">-->
-        <!--            &lt;!&ndash;            <div class="psycho-title">&ndash;&gt;-->
-        <!--            &lt;!&ndash;                <h4>Психология и коучинг</h4>&ndash;&gt;-->
-        <!--            &lt;!&ndash;            </div>&ndash;&gt;-->
-        <!--            <div class="confidential">-->
-        <!--                <div class="fa fa-user-secret"></div>-->
-        <!--            </div>-->
-        <!--            <div class="free-session">-->
-        <!--                <div class="fa fa-money"></div>-->
-        <!--            </div>-->
-        <!--            <div class="online">-->
-        <!--                <div class="fa fa-headphones"></div>-->
-        <!--            </div>-->
-        <!--            <p>Полная конфиденциальность</p>-->
-        <!--            <p>Первая сессия – бесплатно</p>-->
-        <!--            <p>Онлайн или очно (Киев)</p>-->
-
-        <!--        </div>-->
-        <!--        </div>-->
         <div class="author-training grid">
             <h4 class="author-title">З чим я можу допомогти:</h4>
             <div class="corporate">
@@ -273,7 +255,7 @@
             <div class="plan ultimite">
                 <div class="plan-inner">
                     <div class="entry-title">
-                        <h3>Авторские курсы</h3>
+                        <h3>Авторскі курси</h3>
                         <div class="price"><p class="fa fa-shopping-bag"></p>
                         </div>
                     </div>
@@ -416,21 +398,23 @@
     </div>
 </section>
 
-
 <!--Форма записи-->
-<div class="overlay appear" id="overlay"><!--overlay appear - how to do this?-->
+<div class="overlay appear" id="overlay" ><!--overlay appear - how to do this?-->
     <div class="overlay-content">
-        <form action="" class="form grid sendMail" method="post" enctype="multipart/form-data">
+        <form action="" class="form grid SendMail" method="post" enctype="multipart/form-data">
             <div class="title-close subitems">
-                <div><h3 class="form-title">Запис на безкоштовну сесію</h3></div>
+                <div><h3 class="form-title">Запись на безкоштовну сесію</h3></div>
                 <div><img class='close-button' src="img/close-button.svg" alt=""></div>
             </div>
-            <div class="form-container grid">
+            <div class="form-container grid ">
                 <label for="form-name" class="form-description">Ваше ім'я: </label>
-                <input id="form-name" type="text" placeholder="ім'я...">
+                <input id="form-name" name="name" type="text" placeholder="ім'я..." required>
                 <label for="form-interest" class="form-description">Номер телефону: </label>
-                <input id="form-interest" type="text" placeholder="+38-050-555-55-55">
-                <div class="orange-button submitBtn">Залишити заявку</div>
+                <input id="form-interest" name='phone' type="text" placeholder="+38-050-555-55-55" required>
+                <label for="form-mail" class="form-description">Email: </label>
+                <input id="form-mail" name='email' type="email" placeholder="email..." required>
+                <div class="g-recaptcha" data-sitekey="6LcGIKwaAAAAAAoi7D0o9Hhzje8pSF-uaAF5auZk" style="grid-column: 1/3;"></div>
+                <button type='submit' class="orange-button submitBtn">Залишити заявку</button>
             </div>
         </form>
     </div>
@@ -439,24 +423,27 @@
 <!--Форма записи-->
 <div class="overlay-package appear" id="overlay-package"><!--overlay appear - how to do this?-->
     <div class="overlay-content">
-        <form action="" class="form-package grid">
+        <form action="" class="form-package grid SendMail" method="post" enctype="multipart/form-data">
             <div class="title-close subitems">
                 <div><h3 class="form-title">Обрати пакет</h3></div>
                 <div><img class='close-button-packages' src="img/close-button.svg" alt=""></div>
             </div>
-            <div class="form-container grid">
+            <div class="form-container grid" style="grid-gap: 1em;">
                 <label for="form-package-name" class="form-description">Ваше ім'я: </label>
-                <input id="form-package-name" type="text" placeholder="имя...">
+                <input id="form-package-name" type="text" placeholder="ім'я..." name="name" required>
                 <label for="form-package-interest" class="form-description">Номер телефону: </label>
-                <input id="form-package-interest" type="text" placeholder="+38-050-555-55-55">
+                <input id="form-package-interest" type="text" placeholder="+38-050-555-55-55" name="phone" required>
+                <label for="form-package-mail" class="form-description">Email: </label>
+                <input id="form-package-mail" type="email" placeholder="email..." name="email" required>
                 <label for="packages" class="form-description">Оберіть пакет: </label>
-                <select id="packages">
-                    <option class="package-list" value="Базовий">Базовий</option>
-                    <option class="package-list" selected value="Стандарт">Стандарт</option>
-                    <option class="package-list" value="Преміум">Преміум</option>
-                    <option class="package-list" value="Авторскі курси">Авторскі курси</option>
+                <select id="packages" name="package">
+                    <option class="package-list" value="Базовый">Базовий</option>
+                    <option class="package-list" value="Стандарт">Стандарт</option>
+                    <option class="package-list" value="Премиум">Преміум</option>
+                    <option class="package-list" value="Авторские курсы">Авторскі курси</option>
                 </select>
-                <div class="orange-button packageBtn">Залишити заявку</div>
+                <div class="g-recaptcha" data-sitekey="6LcGIKwaAAAAAAoi7D0o9Hhzje8pSF-uaAF5auZk" style="grid-column: 1/3;"></div>
+                <button type="submit" class="orange-button packageBtn">Залишити заявку</button>
             </div>
         </form>
     </div>
@@ -490,11 +477,11 @@
         <div class="insta-feed">
             <p style="text-align: center;">Instafeed</p>
             <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-            <div class="elfsight-app-d720a633-7e08-4691-9650-5512da142c83"></div>
+            <div class="elfsight-app-111e72c8-83d5-4ba3-b98a-3bbda94462e0"></div>
         </div>
     </div>
 
-    <div class="footer-copy">Всі права защищені. Coach Partner ©</div>
+    <div class="footer-copy">Всі права захищені. Coach Partner ©</div>
 </footer>
 
 
@@ -502,7 +489,18 @@
 
 <script src="js/scripts.min.js"></script>
 <link rel="stylesheet" href="css/font-awesome.min.css">
+<script src="./vg/www/templates/modules/mail/js/mail.js"></script>
+<script src="https://www.google.com/recaptcha/api.js"></script>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EYCR3LZ74C"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-EYCR3LZ74C');
+</script>
 
 </body>
 </html>

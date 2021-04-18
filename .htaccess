@@ -1,0 +1,55 @@
+## Secure htaccess file ##
+<Files .htaccess>
+Order Allow,Deny
+Deny from all
+</Files>
+
+#redirects
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+#cache
+
+# Fonts
+# Add correct content-type for fonts
+AddType application/vnd.ms-fontobject .eot
+AddType application/x-font-ttf .ttf
+AddType application/x-font-opentype .otf
+AddType application/x-font-woff .woff
+AddType image/svg+xml .svg
+
+<ifModule mod_expires.c>
+ ExpiresActive On
+ #cache flash and images for 30 days
+ ExpiresByType image/x-icon "access plus 30 days"
+ ExpiresByType image/x-icon "access plus 30 days"
+ ExpiresByType image/jpeg "access plus 30 days"
+ ExpiresByType image/png "access plus 30 days"
+ ExpiresByType application/x-shockwave-flash "access plus 30 days"
+ #cache css, javascript and txt files for 30 days
+ ExpiresByType text/css "access plus 30 days"
+ ExpiresByType text/javascript "access plus 30 days"
+ ExpiresByType application/javascript "access plus 30 days"
+ ExpiresByType application/x-javascript "access plus 30 days"
+ #cache html & htm files for 30 days
+ ExpiresByType text/html "access plus 1 day"
+ #cache xml files for 20 minutes
+ #cache fonts
+ ExpiresByType application/xhtml+xml "access plus 20 minutes"
+ ExpiresByType application/x-font-ttf "access plus 1 year"
+ ExpiresByType application/x-font-opentype "access plus 1 year"
+ ExpiresByType application/x-font-woff "access plus 1 year"
+ ExpiresByType application/font-woff2  "access plus 1 month"
+ ExpiresByType image/svg+xml "access plus 1 year"
+
+</ifModule>
+
+
+ErrorDocument 404 https://coachpartner.live/error_404.html
+
+

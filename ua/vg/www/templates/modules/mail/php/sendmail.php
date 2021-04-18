@@ -12,14 +12,14 @@ $data = $_POST;
 // Если включена капча, то проверяем капчу
 if(_RECAPTCHA_){
     if(!\core\ReCaptcha::instance()->checkRecaptcha()){
-        echo json_encode(['error' => 1, 'data' => 'Ошибка капчи']);
+        echo json_encode(['error' => 1, 'data' => 'Помилка капчі']);
         exit();
     }
 }
 
 // Проверим поле на пустоту
 if(empty($data['email'])){
-    echo json_encode(['error' => 1, 'data' => 'Введите email']);
+    echo json_encode(['error' => 1, 'data' => 'Введіть email']);
     exit();
 }
 
@@ -34,19 +34,27 @@ if(!empty($_FILES['file']['tmp_name'])){
     if (move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile)) {
         // echo "Файл корректен и был успешно загружен.\n";
     } else {
-        echo json_encode(['error' => 1, 'data' => 'Возможная атака с помощью файловой загрузки!']);
+        echo json_encode(['error' => 1, 'data' => 'Можлива атака за Допомогою файлового завантаження!']);
         exit();
     }
     $attachments[]=$uploadfile;
 }
 
-$message = '<p>Новое сообщение с формы обратной связи.</p>';
+$message = "<p>Нове повідомлення з форми зворотнього зв'язку.</p>";
 
 // Прикрепим все данные из формы
 $message .= \modules\mail\services\sMail::instance()->getBlockBuffer($data);
 
+$message2 = "<h1> Вітаю!</h1>
+            <p> Дякую за Вашу заявку на моєму сайті.</p>
+            <p>Я зконтактую з Вами в найближчий час.</p>
+            <p>З повагою,</p>
+            <p>Ірина Лапіна</p>";
 
-\core\PHPMail::instance()->sendSMTPMail($emailto, 'Новое сообщение с сайта '.$_SERVER['HTTP_HOST'], $message, $attachments);
 
-echo json_encode(['error' => 0, 'data' => 'Сообщение успешно отправлено']);
+\core\PHPMail::instance()->sendSMTPMail($emailto, 'Нове повідомлення з сайту '.$_SERVER['HTTP_HOST'], $message, $attachments);
+
+\core\PHPMail::instance()->sendSMTPMail($data['email'], 'Ваша заявка', $message2, $attachments);
+
+echo json_encode(['error' => 0, 'data' => 'Повідомлення успішно відправлено']);
 exit();
